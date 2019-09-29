@@ -1,7 +1,8 @@
 module.exports = {
   env: {
-    browser: true,
     es6: true,
+    jest: true,
+    browser: true,
   },
   extends: [
     "airbnb",
@@ -11,8 +12,8 @@ module.exports = {
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly",
+    __DEV__: true
   },
-  parser: "babel-eslint",
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -23,7 +24,9 @@ module.exports = {
   plugins: [
     "react",
     "prettier",
-    "react-hooks"
+    "react-hooks",
+    "import",
+    "jsx-a11y"
   ],
   rules: {
     "prettier/prettier": "error",
